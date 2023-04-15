@@ -212,7 +212,11 @@ img {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 10;
+  
+
 }
+
+
 
 .home__title {
   align-self: center;
@@ -343,8 +347,9 @@ img {
 
 /*===== OFFER =====*/
 .offer__bg {
-  background: url(../../assets/img/offer.jpg) no-repeat center/cover;
+  background: url(../../assets/images/banner04.jpg) no-repeat center/cover;
   text-align: center;
+  opacity: .7;
   
 }
 
