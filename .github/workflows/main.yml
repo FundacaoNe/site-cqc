@@ -5,14 +5,16 @@ on:
     branches: [ development ]
 
 jobs:
-  deployment:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-    environment: 
-      name: production
-      url: https://cqccartasqcuram.com.br
-    # runs-on: ubuntu-latest
     steps:
-     with:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
@@ -21,23 +23,3 @@ jobs:
         
         protocolo : ftp
         port : 21 
-
-# jobs:
-#   web-deploy:
-#     name: 🎉 Deploy
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: 🚚 Get latest code
-#       uses: actions/checkout@v2
-    
-#     - name: 📂 Sync files
-#       uses: SamKirkland/FTP-Deploy-Action@4.3.0
-#       with:
-#         server: ${{ secrets.FTP_HOST }}
-#         username: ${{ secrets.FTP_USERNAME }}
-#         password: ${{ secrets.FTP_PASSWORD }}
-#         # server-dir: cqccartasqcuram/
-      
-        
-#         protocolo : ftp
-#         port : 21 
