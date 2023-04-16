@@ -26,7 +26,6 @@
   --body-font: 'Open Sans', sans-serif;
   --big-font-size: 3rem;
   --h1-font-size: 1.5rem;
-  --title2-font-size: 2.5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --small-font-size: .75rem;
@@ -36,14 +35,13 @@
   :root {
     --big-font-size: 6rem;
     --h1-font-size: 2.25rem;
-    --title2-font-size: 2rem;
     --h2-font-size: 1.5rem;
     --normal-font-size: 1rem;
     --small-font-size: .813rem;
   }
 }
 
-/*===== Margens =====*/
+/*===== Margenes =====*/
 :root {
   --mb-1: 0.5rem;
   --mb-2: 1rem;
@@ -197,7 +195,6 @@ img {
 /*===== HOME =====*/
 .home {
   background-color: var(--gray-color);
-  position: relative;
 }
 
 .home__container {
@@ -206,30 +203,11 @@ img {
 
 .home__data {
   padding-top: 6rem;
- 
-  /***/
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 10;
-  
-
 }
 
 .home__title {
   align-self: center;
   font-size: var(--big-font-size);
-  line-height: 1;  
-  letter-spacing: .5rem;
-  margin-bottom: 4rem;
-}
-
-.home__title_h2{
-  align-self: center;
-  font-size: var(--title2-font-size);
-  /* font-size: 1rem; */
   line-height: 1;  
   letter-spacing: .5rem;
   margin-bottom: 4rem;
@@ -356,10 +334,8 @@ img {
 
 /*===== OFFER =====*/
 .offer__bg {
-  background: url(../../assets/images/banner04.jpg) no-repeat center/cover;
+  background: url(../../assets/img/offer.jpg) no-repeat center/cover;
   text-align: center;
-  opacity: .7;
-  
 }
 
 .offer__data {
@@ -417,7 +393,7 @@ img {
 
 .newsletter__description {
   margin-bottom: var(--mb-2);
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
   color: var(--dark-color-light);
 }
 
@@ -433,15 +409,6 @@ img {
   padding: 0 1rem;
 }
 
-/* volunteer card  */
-.volunteer__card {
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: 300px 300px 300px;
-  max-width: 800px;
-  margin: 2rem auto;
-}
-
 /*===== SPONSORS =====*/
 .sponsors__container {
   grid-template-columns: repeat(2, 1fr);
@@ -452,11 +419,10 @@ img {
 .sponsors__logo {
   display: flex;
   justify-content: center;
-  flex-direction: column;
 }
 
 .sponsors__logo img {
-  width: 300px;
+  width: 80px;
   filter: opacity(70%);
 }
 
@@ -554,8 +520,7 @@ img {
 
   .home__title{
     line-height: .8;
-    letter-spacing: 1rem;
-    
+    letter-spacing: 1.5rem;
   }
 
   .home__img {
@@ -609,7 +574,6 @@ img {
 
   .home__data {
     padding-left: 7rem;
-    width: 1000px;
   }
 
   .home__img {

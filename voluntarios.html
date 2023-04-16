@@ -7,6 +7,8 @@
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <style>
+
+        /* slide showw  */
       .slideshow-container {
         position: relative;
         width: 100%;
@@ -28,6 +30,99 @@
       .slideshow-container img.active {
         opacity: 0.5;
       }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
+/* html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+} */
+::selection{
+  color: #fff;
+  background: #1cc7d0;
+}
+.wrapper{
+  height: 400px;
+  width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+	perspective: 1000px;
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapper .back-face img{
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+.wrapper .back-face .info{
+  text-align: center;
+}
+.back-face .info .title{
+  font-size: 30px;
+  font-weight: 500;
+}
+.back-face ul{
+  display: flex;
+}
+.back-face ul a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+  transition: all 0.5s ease;
+}
+.back-face ul a:hover{
+  color: #1cc7d0;
+  border-color: #1cc7d0;
+  background: linear-gradient(375deg, transparent, transparent);
+}
+
     </style>
 
     <title>CQC Cartas Que Curam</title>
@@ -76,7 +171,7 @@
       <section id="secao1">
         <div class="home__data">
           <h1 class="home__title">CqC - Cartas q Curam</h1>
-          <strong>Somos Escrevedores de Cartas</strong>
+          <strong>Somos Voluntários</strong>
         </div>
 
         <div class="slideshow-container">
@@ -85,37 +180,139 @@
         </div>
       </section>
 
-      <!--===== NOSSA MISSÃO =====-->
-      <section class="newsletter section" id="suscribe">
-        <div class="newsletter__container bd-grid">
-          <div class="newsletter__suscribe">
-            <h2 class="section-title">NOSSA MISSÃO</h2>
-            <p class="newsletter__description" style="text-align: justify">
-              Projeto Cartas q Curam é um projeto onde procuramos enviar cartas
-              de motivação, de conforto, para as pessoas que estão com
-              depressão, síndrome do pânico, toc, viciados, presidiários, etc…
-            </p>
+      <section class="volunteer__card">
 
-            <p class="newsletter__description" style="text-align: justify">
-              As cartas são de próprio punho, e foi desta maneira que encontrei
-              para dizer ao mundo que as Cartas Curam, pois em algum lugar do
-              mundo, alguém ainda se lembra de você!
-            </p>
-
-            <p class="newsletter__description" style="text-align: justify">
-              Acreditem… Funciona!!!
-            </p>
-
-            <p class="newsletter__description" style="text-align: justify">
-              Quer receber, enviar, tem alguém que você acha que necessita de
-              uma carta incentivadora??? Se inscreva através do formulário ou
-              entre em contato por uma de nossas redes de contato!!!
-            </p>
-
-            <a href="./receba-cartas.html" class="button">RECEBA CARTAS</a>
-          </div>
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="./assets/images/voluntario (1).jpeg" alt="voluntário Isadora Vanderlan">
         </div>
-      </section>
+        <div class="card back-face">
+          <img src="./assets/images/voluntario (1).jpeg" alt="voluntário Isadora Vanderlan">
+          <div class="info">
+            <div class="title">Isadora Vanderlan</div>
+            <p>
+                Bacharel em Sistema de Informações pela Universidade Nove de Julho, <br>
+                 atualmente trabalha com o ERP TOTVS Protheus. <br>
+                 Responsável pelo desenvolvimento e layout dos sites IBA e CqC. 
+            </p>
+          </div>
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="./assets/images/voluntario (1).png" alt="voluntário Isaque Menezes">
+        </div>
+        <div class="card back-face">
+          <img src="./assets/images/voluntario (1).png" alt="voluntário Isaque Menezes">
+          <div class="info">
+            <div class="title">Isaque Menezes</div>
+            <p>Acadêmico de Sistemas de Informação pela UFPA, 
+                Desenvolvedor Back-end na Equilibrium Web. 
+                E no Instituto Berna Almeida tem atuado principalmente na infraestrutura e suporte </p>
+          </div>
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="./assets/images/voluntario (2).png" alt="Júlia Marchezin">
+        </div>
+        <div class="card back-face">
+          <img src="./assets/images/voluntario (2).png" alt="Júlia Marchezin">
+          <div class="info">
+            <div class="title">Júlia Marchezin</div>
+            <p>Estudante, nascida e criada em São Paulo. 
+                Ensino médio completo em 2022 e busca vaga para graduação em biologia. 
+                No projeto CqC atua como supervisora e escrevedora </p>
+          </div>
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="./assets/images/voluntario (3).png" alt="Mônica de Moraes">
+        </div>
+        <div class="card back-face">
+          <img src="./assets/images/voluntario (3).png" alt="Mônica de Moraes">
+          <div class="info">
+            <div class="title">Mônica de Moraes</div>
+            <p>Residente do Rio de Janeiro. 
+                Cuidadora de idosos credenciada pelo Instituto Projeto Triunfar. 
+                Faz parte do Projeto Conte Comigo </p>
+          </div>
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="./assets/images/voluntario (4).png" alt="Jennifer Norte">
+        </div>
+        <div class="card back-face">
+          <img src="./assets/images/voluntario (4).png" alt="Jennifer Norte">
+          <div class="info">
+            <div class="title">Jennifer Norte</div>
+            <p>Reside em Minas Gerais. Técnica em Administração pelo Sebrae, 
+                atualmente estudo Engenharia Ambiental na UFV. 
+                Sou secretária do Projeto Conte Comigo do IBA</p>
+          </div>
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="./assets/images/Gabrielle.png" alt="voluntária Gabriella Patrícia">
+        </div>
+        <div class="card back-face">
+          <img src="./assets/images/Gabrielle.png" alt="voluntária Gabriella Patrícia">
+          <div class="info">
+            <div class="title">Gabriella Patrícia</div>
+            <p>Arquiteta, mineira de naturalidade, mas bem brasiliense pelo tempo de moradia. <br>
+                Graduada pela Universidade Paulista (UNIP) <br>
+                e designer de interiores pelo Instituto IPOG. <br>
+                 No projeto CqC atua como supervisora </p>
+          </div>
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+
+    </section>
 
       <!--===== OFFER =====-->
       <section class="offer section">
@@ -177,51 +374,7 @@
         </div>
       </section>
 
-      <!--===== NEWSLETTER =====-->
-      <section class="newsletter section" id="suscribe">
-        <div class="newsletter__container bd-grid">
-          <div class="newsletter__suscribe">
-            <h2 class="section-title">Como Ser Um Escritor?</h2>
-            <p class="newsletter__description">
-              Para ser um escritor basta se cadastrar através do formulário
-              abaixo. Entraremos em contato para fazer os próximos passos.
-            </p>
-
-            <p class="newsletter__description">
-              Ao clicar no botão de formulário será aberto uma nova aba para
-              preenchimento do formulário. Lembre-se que ao se inscrever, você
-              estará participando de um projeto muito sério, onde há pessoas
-              verdadeiramente comprometidas com aqueles que nos batem a porta .
-            </p>
-            <p class="newsletter__description">
-              Pedimos que todos os dados sejam preenchidos corretamente, para
-              que o lenitivo necessário chegue a tempo de salvar vidas.
-            </p>
-
-            <a
-              style="text-align: center"
-              target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeXmS28bNqeesT0_1-V3mg0iYcUAmTE1juw4zIB7uSJjKAllA/viewform"
-              class="button"
-            >
-              Formulário Escritor - Brasil
-            </a>
-
-            <br />
-            <br />
-
-            <a
-              style="text-align: center"
-              target="_blank"
-              href="https://docs.google.com/forms/d/1cagRGYfWfNqqooOXK8n0BgPpaNEgckOgJoa_pedz2HY/viewform?edit_requested=true"
-              class="button"
-            >
-              Formulário Escritor - Portugal
-            </a>
-          </div>
-        </div>
-      </section>
-
+    
       <!--===== SPONSORS =====-->
       <section class="sponsors section"> 
         
