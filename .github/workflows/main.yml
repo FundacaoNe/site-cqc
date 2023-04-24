@@ -2,7 +2,7 @@ name: 🚀 Deploy CQC Development
 
 on:
   push:
-    branches: [ development ]
+    branches: [ developmentOFF ]
 
 jobs:
   web-deploy:
